@@ -1,0 +1,75 @@
+:root{
+    --plimary-font: "Open Sans", sans-serif;
+}
+
+.HeroSection{
+    margin: 2rem;
+}
+
+.HomePage{
+    display: flex;
+    gap: 2%;
+}
+.ProfilePic {
+    /* background: #000; */
+    width:100%;
+    height: 40vh;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10%;
+
+    /* margin-bottom: .5rem; */
+}
+.ProfilePic img{
+    width: 100%;
+    height: 100%;
+  
+}
+.GithubDetails h2{
+    color: #070f2b;
+    font-size: 25px;
+    font-family: var(--plimary-font);
+    margin-bottom: .5rem;
+}
+.GithubDetails h4{
+    font-weight: 100;
+    margin-bottom: .4rem;
+}
+.GithubDetails p{
+    margin-bottom: 1rem;
+}
+.GithubDetails a{
+    background-color: #070f2b;
+    padding: 10px 80px;
+    text-decoration: none;
+    color: #ccd2da;
+    font-family: var(--plimary-font);
+    border-radius: 10px;
+}
+/* .GithubInfo{
+    display: flex;
+    flex-direction: column;
+} */
+.Profile-icon-wrapper{
+    display: flex;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: var(--plimary-font);
+}
+.ProfileDetails{
+    width: 35%;
+}
+.Repositories{
+    width: 100%;
+    
+}
+.RepositoryCard{
+    background-color: #f2efe8;
+    width: 30em;
+    
+}
+.RepositoryCardIcon{
+    display: flex;
+    background-color: #fff7d6;
+    gap: 1rem;
+}
