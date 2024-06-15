@@ -19,7 +19,7 @@ const Info = ({ Name, icon  }) => {
     );
   };
 
-const Profile = () => {
+const Profile = ({userdatafetch}) => {
   return (
     <>
     <section className='HeroSection'>
@@ -29,7 +29,7 @@ const Profile = () => {
                     <img src={profile} alt="" />
                 </div>
                 <div className='GithubDetails'> 
-                  <h2>Bridget Gitonga</h2>
+                  <h2>{userdatafetch.name}</h2>
 
                     <h4>GitHub</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur <br/> dipisicing elit. Architecto, aliquam.</p>
