@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import Profile from '../../Pages/Home/Profile';
+import "./Header.css";
 
 const Header = () => {
   const [userdata, setuserdata] = useState("steel25baby");
   const [userdatafetch, setuserdatafetch] = useState([]);
+  const [userRepositories, setUserRepositories] = useState([]);
+  const [userFollowers, setUserFollowers] = useState([]);
+  const [userFollowing, setUserFollowing] = useState([]);
   const [error, seterror] = useState(false);
 
   const HandleGituser = async (e) => {
     e.preventDefault();
     setuserdatafetch([]);
+    setUserRepositories([]);
+    setUserFollowers([]);
+    setUserFollowing([]);
     seterror(false);
     try {
       const responceuser = await fetch(`https://api.github.com/users/${userdata}`);
@@ -22,6 +29,44 @@ const Header = () => {
       }
     } catch (error) {
       seterror("There was an error");
+    }
+    try {
+         const responceRepos = await fetch (`https://api.github.com/users/${username}repos`)
+         if(responceRepos.ok){
+          const dataRepos = await responceRepos.json()
+          setUserRepositories(dataRepos) 
+         }
+         else{
+          seterror("user not found")
+         }
+      
+    } catch (error) {
+      seterror('there was an error')
+    }
+    try {
+      const responceFollowers =await fetch(`https://api.github.com/users/${username}followers `)
+      if(responceFollowers.ok){
+        const dataFollowers =await responceFollowers.json()
+        setUserFollowers(dataFollowers)
+      }
+      else{
+        seterror("followers not found")
+      }
+      
+    } catch (error) {
+      seterror('there was an error')
+    }
+    try {
+      const responceFollowing = await fetch(' https://api.github.com/users/${username}/following')
+      if (responceFollowing.ok) {
+        const dataFollowing = await responceFollowing.json()
+        setUserFollowing(dataFollowing)
+      }
+      else{
+        seterror("following not found")
+      }
+    } catch (error) {
+      seterror("there was an error")
     }
   };
 
@@ -44,7 +89,11 @@ const Header = () => {
       </div>
       {error && <p className="error">{error}</p>}
       <div>
-        <Profile userdatafetch={userdatafetch} />
+        <Profile userdatafetch={userdatafetch} 
+        userRepositories={userRepositories}
+        userFollowers={userFollowers}
+        userFollowing={userFollowing}
+        />
       </div>
     </section>
   );

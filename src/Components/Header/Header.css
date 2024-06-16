@@ -32,3 +32,10 @@
 .HeaderButton {
     padding: 10px 15px;
 }
+@media screen and (max-width:28.125){
+    .Heading{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
