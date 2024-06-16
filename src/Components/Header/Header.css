@@ -1,38 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 :root{
     --plimary-font: "Open Sans", sans-serif;
+    --plimary-color: #070f2b;
+    --secondary-color: #ccd2da;
 }
 .Heading{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     background-color: #070f2b;
-    min-height: 10vh;
-    padding: 1rem;
-    font-family: var(--plimary-font);
-
-}
-@media   screen and (max-width: 28.125em) {
-    .Heading{
-        display: flex;
-        flex-wrap: wrap;
-    }
+    height: 10vh;
+    align-items: center;
+    padding: 2rem;
 }
 .Heading h1{
     color: #ccd2da;
-    font-size: 25px;
+    font-family: var(--plimary-font);
+    font-size: 30px;
 }
 .Heading p{
     color: #ccd2da;
 }
 .Heading a{
+    text-decoration: none;
     color: #ccd2da;
-    
-}
-.HeaderButton{
-    color: black;
-    padding: 10px 15px;
+    font-family: var(--plimary-font);
 }
 .HeaderLabel input{
+    padding: 10px 15px;
+
+}
+.HeaderButton {
     padding: 10px 15px;
 }
