@@ -17,7 +17,7 @@ const Info = ({ Name, icon }) => {
   );
 };
 
-const Profile = ({ userdatafetch }) => {
+const Profile = ({ userdatafetch, userRepositories}) => {
   
   if (!userdatafetch || Object.keys(userdatafetch).length === 0) {
     return <p>No user data found</p>;
@@ -47,44 +47,20 @@ const Profile = ({ userdatafetch }) => {
           </div>
         </div>
         <div className='Repositories'>
-
-        {/* <>
-              <h2 className="headerRepo">{`Repositories ()`}</h2>
-          {
-                displayedRepos.map((repo) => (
-                  <Repositories
-                    key={repo.id}
-                    linkToRepo={repo.html_url}
-                    // repotitle={repo.name}
-                    Descriptionrepo={repo.description}
-                    forksRepo={repo.forks_count}
-                    starsRepo={repo.stargazers_count}
-                  />
-                ))
-          }
-            </> */}
-        {/* {loading && <h2>Loading repositories, please wait...</h2>} */}
-          {/* {error && <h2>{error}</h2>} */}
-          {/* {  (
+          {userRepositories.map((repo, i)=>(
             <>
-              <h2 className="headerRepo">{`Repositories ()`}</h2>
-              {repositoryCount === 0 ? (
-                <h2>Oops...No Repositories yet</h2>
-              ) : (
-                displayedRepos.map((repo) => (
-                  <Repositories
-                    key={repo.id}
-                    linkToRepo={repo.html_url}
-                    // repotitle={repo.name}
-                    Descriptionrepo={repo.description}
-                    forksRepo={repo.forks_count}
-                    starsRepo={repo.stargazers_count}
-                  />
-                ))
-              )}
+            <a href={repo.clone_url} target='_blank'>
+            <div key={i} className='repo-card'>
+              <h2>{repo.full_name}</h2>
+              <p>{repo.description}</p>
+              <div className='repo-card-icon-box'>
+              <p>{repo.forks} forks</p>
+              <p>{repo.stargazers_count} star</p>
+              </div>
+            </div>
+            </a>
             </>
-          )} */}
-
+          ))}
         </div>
       </div>
     </section>
