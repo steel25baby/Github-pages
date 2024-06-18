@@ -4,10 +4,9 @@ import { MdLocationOn } from "react-icons/md";
 import { GiTeacher } from "react-icons/gi";
 import { RiGitRepositoryFill } from "react-icons/ri";
 import { MdGroups } from "react-icons/md";
-import { VscRepoForked } from "react-icons/vsc";
-import { FaStar } from "react-icons/fa";
 import { RiExternalLinkFill } from "react-icons/ri";
-
+// import Repositories from '../Repositories';
+import './Profile.css'
 const Info = ({ Name, icon }) => {
   return (
     <div className="Info">
@@ -19,6 +18,7 @@ const Info = ({ Name, icon }) => {
 };
 
 const Profile = ({ userdatafetch }) => {
+  
   if (!userdatafetch || Object.keys(userdatafetch).length === 0) {
     return <p>No user data found</p>;
   }
@@ -34,7 +34,7 @@ const Profile = ({ userdatafetch }) => {
             <h2>{userdatafetch.name || "No Name"}</h2>
             <h4>GitHub</h4>
             <p>{userdatafetch.bio || "No bio available"}</p>
-            <a href={userdatafetch.html_url} target="_blank" rel="noopener noreferrer">
+            <a href={userdatafetch.html_url} target="_blank" rel="noopener noreferrer" className='btn-link'>
               <RiExternalLinkFill /> View on GitHub
             </a>
           </div>
@@ -47,7 +47,44 @@ const Profile = ({ userdatafetch }) => {
           </div>
         </div>
         <div className='Repositories'>
-          {/* Add logic to display repositories if needed */}
+
+        {/* <>
+              <h2 className="headerRepo">{`Repositories ()`}</h2>
+          {
+                displayedRepos.map((repo) => (
+                  <Repositories
+                    key={repo.id}
+                    linkToRepo={repo.html_url}
+                    // repotitle={repo.name}
+                    Descriptionrepo={repo.description}
+                    forksRepo={repo.forks_count}
+                    starsRepo={repo.stargazers_count}
+                  />
+                ))
+          }
+            </> */}
+        {/* {loading && <h2>Loading repositories, please wait...</h2>} */}
+          {/* {error && <h2>{error}</h2>} */}
+          {/* {  (
+            <>
+              <h2 className="headerRepo">{`Repositories ()`}</h2>
+              {repositoryCount === 0 ? (
+                <h2>Oops...No Repositories yet</h2>
+              ) : (
+                displayedRepos.map((repo) => (
+                  <Repositories
+                    key={repo.id}
+                    linkToRepo={repo.html_url}
+                    // repotitle={repo.name}
+                    Descriptionrepo={repo.description}
+                    forksRepo={repo.forks_count}
+                    starsRepo={repo.stargazers_count}
+                  />
+                ))
+              )}
+            </>
+          )} */}
+
         </div>
       </div>
     </section>

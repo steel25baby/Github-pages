@@ -8,9 +8,9 @@
     display: flex;
     justify-content: space-between;
     background-color: #070f2b;
-    height: 10vh;
+    min-height: 10vh;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 .Heading h1{
     color: #ccd2da;
@@ -32,10 +32,8 @@
 .HeaderButton {
     padding: 10px 15px;
 }
-@media screen and (max-width:28.125){
+@media screen and (max-width:30em){
     .Heading{
-        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
     }
 }

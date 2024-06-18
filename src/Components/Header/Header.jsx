@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Profile from '../../Pages/Home/Profile';
 import "./Header.css";
+// import Repositories from '../../Pages/Home/Profile';
 
 const Header = () => {
   const [userdata, setuserdata] = useState("steel25baby");
@@ -94,6 +95,10 @@ const Header = () => {
         userFollowers={userFollowers}
         userFollowing={userFollowing}
         />
+      </div>
+      <div>
+        <h1>Repositories</h1>
+        
       </div>
     </section>
   );
