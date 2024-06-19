@@ -1,15 +1,15 @@
-import React from 'react'
-import Profile from './Profile'
-import "./Profile.css"
+import React from "react";
+import Profile from "./Profile";
+import "./Profile.css";
 // import Repositories from '../Repositories'
 
 const Home = () => {
   return (
     <>
-    <Profile/>
-    {/* <Repositories/> */}
+      <Profile />
+      {/* <Repositories/> */}
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

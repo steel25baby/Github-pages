@@ -1,189 +1,184 @@
-:root{
-    --plimary-font: "Open Sans", sans-serif;
+:root {
+  --plimary-font: "Open Sans", sans-serif;
 }
 
-.HeroSection{
-    margin: 2rem;
+.HeroSection {
+  margin: 2rem;
 }
 
-.HomePage{
-    display: flex;
-    gap: 2%;
+.HomePage {
+  display: flex;
+  gap: 2%;
 }
 .ProfilePic {
-    /* background: #000; */
-    width:100%;
-    height: 40vh;
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 10%;
+  /* background: #000; */
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10%;
 
-    /* margin-bottom: .5rem; */
+  /* margin-bottom: .5rem; */
 }
-.ProfilePic img{
-    width: 100%;
-    height: 100%;
-  
+.ProfilePic img {
+  width: 100%;
+  height: 100%;
 }
-.Profile-icon-wrapper{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.Profile-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.GithubDetails{
-    width: 100%;
-    height: auto;
+.GithubDetails {
+  width: 100%;
+  height: auto;
 }
-.GithubDetails h2{
-    color: #070f2b;
-    font-size: 25px;
-    font-family: var(--plimary-font);
-    margin-bottom: .5rem;
+.GithubDetails h2 {
+  color: #070f2b;
+  font-size: 25px;
+  font-family: var(--plimary-font);
+  margin-bottom: 0.5rem;
 }
-.GithubDetails h4{
-    font-weight: 100;
-    margin-bottom: .4rem;
+.GithubDetails h4 {
+  font-weight: 100;
+  margin-bottom: 0.4rem;
 }
-.GithubDetails p{
-    margin-bottom: 1rem;
+.GithubDetails p {
+  margin-bottom: 1rem;
 }
-.GithubDetails a{
-    background-color: #070f2b;
-    padding: 10px 80px;
-    text-decoration: none;
-    color: #ccd2da;
-    font-family: var(--plimary-font);
-    border-radius: 10px;
+.GithubDetails a {
+  background-color: #070f2b;
+  padding: 10px 80px;
+  text-decoration: none;
+  color: #ccd2da;
+  font-family: var(--plimary-font);
+  border-radius: 10px;
 }
 /* .GithubInfo{
     display: flex;
     flex-direction: column;
 } */
- .ProfileDetails{
-    width: 40%;
- }
-.Profile-icon-wrapper{
-    display: flex;
-    margin-top: 1rem;
-    font-size: 20px;
-    font-family: var(--plimary-font);
+.ProfileDetails {
+  width: 40%;
 }
-.Repositories{
-    width: 100%;
-    
+.Profile-icon-wrapper {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 20px;
+  font-family: var(--plimary-font);
 }
-.RepositoryCard{
-    background-color: #f2efe8;
-    width: 30em;
-    
+.Repositories {
+  width: 100%;
 }
-.RepositoryCardIcon{
-    display: flex;
-    background-color: #fff7d6;
-    gap: 1rem;
+.RepositoryCard {
+  background-color: #f2efe8;
+  width: 30em;
+}
+.RepositoryCardIcon {
+  display: flex;
+  background-color: #fff7d6;
+  gap: 1rem;
 }
 
-
-@media screen and (max-width: 43.2em){
-    .GithubDetails a{
-        font-size: 1em;
-        padding: 1em 2em;
-        display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .HomePage{
-        flex-direction: column;
-        align-items: center;
-    }
-    .ProfileDetails{
-        width: 80%;
-    }
-}
-
-/* Start of repository section */
-.Repositories{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1em;
-    padding-top: 2em;
-}
-.Repositories a{
-    text-decoration: none;
-}
-.repo-card{
-    width: 100%;
-    background-color: #f2efe8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5em;
-    border-radius: 10px;
-    gap: 1em;
-    color: #070f2b;
-}
-
-.repo-card-icon-box{
-    width: 100%;
-    background-color: #fff7d6;
+@media screen and (max-width: 43.2em) {
+  .GithubDetails a {
+    font-size: 1em;
+    padding: 1em 2em;
+    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4%;
-    font-size: 1.5em;
+  }
+  .HomePage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ProfileDetails {
+    width: 80%;
+  }
+}
+
+/* Start of repository section */
+.Repositories {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  padding-top: 2em;
+}
+.Repositories a {
+  text-decoration: none;
+}
+.repo-card {
+  width: 100%;
+  background-color: #f2efe8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  border-radius: 10px;
+  gap: 1em;
+  color: #070f2b;
+}
+
+.repo-card-icon-box {
+  width: 100%;
+  background-color: #fff7d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  font-size: 1.5em;
 }
 /* End of repository section */
 
+/* start of followers and following section */
+.followers-container,
+.followers-profile, .following-container , .following-profile{
+  width: 100%;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.followers-info, .following-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.followers-info h1, .following-info h1 {
+  font-size: 2em;
+}
+.followers-card, .following-card {
+  min-width: 20em;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #f1f1e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.followers-card-img , .following-card-img {
+  width: 5em;
+  height: 5em;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.followers-card-img img, .following-card-img img {
+  width: 100%;
+  height: 100%;
+}
+.followers-card button , .following-card button {
+  background: #070f2b;
+  padding: 1em 2em;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
 
-/* start of followers section */
-.followers-container, .followers-profile{
-    width: 100%;
-    display: flex;
-    gap: 2em;
-    flex-wrap: wrap;
-}
-.followers-info{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    flex-wrap: wrap;
-}
-.followers-info h1{
-    font-size: 2em;
-}
-.followers-card{
-    min-width: 20em;
-    padding: 1em;
-    border-radius: 10px;
-    background-color: #f1f1E6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-.followers-card-img{
-    width: 5em;
-    height: 5em;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.followers-card-img img{
-    width: 100%;
-    height: 100%;
-}
-.followers-card button{
-    background: #070f2b;
-    padding: 1em 2em;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-}
-
-
-/* end of followers section */
+/* end of followers  and following section */
