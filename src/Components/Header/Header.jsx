@@ -31,8 +31,8 @@ const Header = () => {
         const dataFollowing = await responceFollowing.json();
 
         // console.log(datauser);
-        console.log(dataRepos);
-        // console.log(dataFollowers);
+        // console.log(dataRepos);
+        console.log(dataFollowers);
         // console.log(dataFollowing);
 
         setuserdatafetch(datauser);

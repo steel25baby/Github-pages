@@ -17,7 +17,7 @@ const Info = ({ Name, icon }) => {
   );
 };
 
-const Profile = ({ userdatafetch, userRepositories}) => {
+const Profile = ({ userdatafetch, userRepositories, userFollowers}) => {
   
   if (!userdatafetch || Object.keys(userdatafetch).length === 0) {
     return <p>No user data found</p>;
@@ -61,6 +61,23 @@ const Profile = ({ userdatafetch, userRepositories}) => {
             </a>
             </>
           ))}
+
+          <div className='followers-container'>
+            <div className='followers-info'>
+            <h1>Followers {userFollowers.length}</h1>
+            <div className="followers-profile">
+          {userFollowers.map((follower, i)=>(
+            <div key={i} className='followers-card'>
+              <div className='followers-card-img'>
+                <img src={follower.avatar_url} alt={`Profile picture of ${follower.login}`} />
+              </div>
+              <h2>{follower.login}</h2>
+              <button>View {follower.login}</button>
+            </div>
+          ))}
+          </div>
+          </div>
+          </div>
         </div>
       </div>
     </section>
